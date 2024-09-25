@@ -1,6 +1,10 @@
 body
 {
+<<<<<<< HEAD
     color: #333;
+=======
+    color: #666;
+>>>>>>> 22fba79 (Añadido un cambio y)
     text-align: center;
     font-family: "Arial";
     font-size: 16px;
