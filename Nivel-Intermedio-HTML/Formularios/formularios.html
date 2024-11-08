@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios con HTML</title>
+</head>
+<body>
+    <h1>Formularios en HTML</h1>
+    <p>Vamos a estudiar que son los formularios en HTML</p>
+    <h2>Formulario de Registro</h2>
+    <form>
+        <label for="nombres">Ingresa tus Nombre</label>
+        <input type="text" required name="nombre" placeholder="Ingresa tu nombre">
+        <label for="apellidos">Ingresa tus Apellidos</label>
+        <input type="text" required name="apellidos" placeholder="Ingresa tus Apellidos">
+        <label for="email">Ingresa tu Correo Electronico </label>
+        <input type="email" required name="correo" placeholder="Ingresa tu Correo">
+        <label for="contraseña">Ingresa tu Contraseña</label>
+        <input type="password" required name="contraseña" placeholder="ingresa la contraseña">
+        <label> <input type="checkbox" name="pasatiempo" value="futbol">Futbol</label>
+        <label> <input type="checkbox" name="pasatiempo" value="musica">Musica</label>
+        <label for="seleccionar">Seleccionar</label>
+        <input type="radio" name="seleccionar">
+        <label for="archivo">Sube un Archivo</label>
+        <input type="file" name="archivo">
+        <label for="cumpleaños">Ingresa tu Fecha de Cumpleaños</label>
+        <input type="date" name="cumpleaños">
+        <input type="submit">
+        <input type="search">
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Práctico</title>
+</head>
+
+<body>
+    <h1>Formulario de Registro Básico</h1>
+    <p>A continuación, ingrese la información correspondiente</p>
+
+    <form action="submit" method="post">
+        <label for="nombre">Ingresa tu nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Diego Guerrero"><br><br>
+
+        <label for="correo">Ingresa tu Correo Electrónico:</label>
+        <input type="email" name="correo" id="correo" placeholder="Ej. correo@ejemplo.com"><br><br>
+
+        <label for="contraseña">Ingresa una Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Mínimo 8 caracteres"><br><br>
+
+        <label for="pais">Seleccione su País:</label>
+        <select name="pais" id="pais">
+            <option value="co">Colombia</option>
+            <option value="mx">México</option>
+            <option value="pe">Perú</option>
+        </select><br><br>
+
+        <p>Género:</p>
+        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+        <label><input type="radio" name="genero" value="femenino"> Femenino</label>
+        <label><input type="radio" name="genero" value="otro"> Otro</label><br><br>
+
+        <p>Pasatiempos:</p>
+        <label><input type="checkbox" name="pasatiempo" value="musica"> Música</label>
+        <label><input type="checkbox" name="pasatiempo" value="programar"> Programar</label><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
