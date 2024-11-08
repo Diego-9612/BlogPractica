@@ -1,0 +1,36 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+}
+
+.card {
+    background-color: dimgrey;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    color: yellowgreen;
+    font-weight: bold;
+    padding-top: 10px;
+    margin: auto;
+    font-size: 30px;
+}
+
+h2 {
+    color: burlywood;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+}
+
+p{
+    color: aliceblue;
+    font-size: 15px;
+    padding: 20px ;
+    background-color: gray;
+    text-align: justify;
+
+}

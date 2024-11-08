@@ -1,0 +1,25 @@
+div {
+    background-color: blueviolet;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    color: aqua;
+}
+
+div{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 100px;
+}
+
+/*
+Tambien se puede usar esta declaracion para los bordes 
+div{
+    border: 3px solid black;
+}
+
+declara solo el borde en la parte superior o inferior o derecha etc. 
+div {
+border-top(left, bottom, right, etc): 2px solid black
+*/

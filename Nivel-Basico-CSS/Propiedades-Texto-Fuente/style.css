@@ -1,0 +1,55 @@
+h1 {
+    /*Define el color del texto*/
+    color: blueviolet;
+    /*Centra el texto en la pagina*/
+    text-align: center;
+    /* define el tipo de fuente que deseamos utilizar(Si una de ellas no esta disponible intenta con la otra y asi sucesibamente)*/
+    font-family: Monserrat;
+    /* Define al texto como negrita */
+    font-weight: 900
+}
+
+h2{
+    color: aquamarine;
+    text-align: left;
+    font-family: Monserrat;
+    font-weight: 700;
+    /*Define el tamaño del texto*/
+    font-size: 30px
+}
+
+.subtitulos{
+    color: aqua;
+    text-align: left;
+    font-family: Monserrat;
+    font-weight: 600;
+    /*Define el estilo del texto como cursiva*/
+    font-style: italic;
+    font-size: 25px;
+
+}
+
+.parrafo {
+    color: black;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    /*Define el espacio que hay entre cada linea*/
+    line-height: 2;
+    /*Define el espacio entre cada una de las palabras*/
+    letter-spacing: 2px;
+}
+
+.ingredientes--obligatorios{
+    color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    /*define una linea en el texto, ya sea debajo encima o tachando el texto*/
+    text-decoration: line-through;
+}
+
+#notas{
+    color: darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  20px;
+    text-align: left;
+    text-decoration: underline;
+}

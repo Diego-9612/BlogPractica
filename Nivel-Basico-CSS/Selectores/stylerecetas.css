@@ -1,0 +1,19 @@
+h1 {
+    color: blueviolet;
+}
+
+h2 {
+    color: rgb(41, 86, 220);
+}
+
+.subtitulos{
+    color: rgb(205, 28, 122);
+}
+
+.ingredientes--obligatorios{
+    color: red;
+}
+
+#notas{
+    color: green;
+}

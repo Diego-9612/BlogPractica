@@ -1,0 +1,29 @@
+div{
+    background-color: antiquewhite;
+    width: 90%;
+}
+
+.title{
+    color: blueviolet;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 100px;
+    background-color: aqua;
+}
+
+.parrafo{
+    color: cadetblue;
+    text-align: justify;
+}
+
+.formulario{
+    background-color: bisque;
+    padding: 20px 10px 20px 20px
+    
+}
+
+.formulario-input{
+    padding: 10px 20px;
+
+}
