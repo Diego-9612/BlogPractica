@@ -1,25 +1,56 @@
-div {
-    background-color: blueviolet;
-    text-align: center;
+body {
+    background-color: black;
+}
+.border-one {
+
+    background-color:black;
+    margin: 10px;
+    width: 500px;
+    padding: 10px;
+    border: 2px solid greenyellow;
+    border-radius: 50px;
     margin: auto;
-    width: 50%;
-    color: aqua;
 }
 
-div{
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
+.border-two{
+    background-color: black;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    color: azure;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+.radioOne{
+    border: 1px solid greenyellow;
+    border-radius: 50px;
+}
+
+.radioTwo{
+    border-bottom: 1px solid greenyellow;
     border-radius: 100px;
 }
 
-/*
-Tambien se puede usar esta declaracion para los bordes 
-div{
-    border: 3px solid black;
+.radioTree{
+    border-top: 1px solid greenyellow;
+    border-radius: 150px;
 }
 
-declara solo el borde en la parte superior o inferior o derecha etc. 
-div {
-border-top(left, bottom, right, etc): 2px solid black
-*/
+.radioFour{
+    border-right: 1px solid greenyellow;
+    border-radius: 200px;
+
+}
+
+.radioFive{
+    border-left: 1px solid greenyellow;
+    border-radius: 200px;
+}
+

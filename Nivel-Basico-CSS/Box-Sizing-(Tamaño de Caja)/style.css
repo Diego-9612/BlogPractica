@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 10px;
+    color: azure;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*El tamaño de un elemento definido en la siguiente clase solo afecta al contenido 
+por lo tanto al agregar padding, bordes o margin, el tamaño del elemento aumentara*/
+
+.box-default {
+    padding: 50px;
+    border: 5px solid black;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 16px;
+}
+
+/* Al definir el box-sizing en border-box el tamaño del elemento se mantiene al agregar mas propiedades */
+.box-new {
+    padding: 50px;
+    border: 5px solid black;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 10px;
+    box-sizing: border-box;
+}
