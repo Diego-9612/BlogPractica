@@ -1,0 +1,41 @@
+/*Colores con rgb (red, green, blue) 255 opciones por cada uno de ellos para crear combinaciones */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    margin: 20px;
+}
+
+/*Colores con Valores HEX para cada color (red, green, blue) tenemos dos valores #00(red)00(green)00(blue)
+conbinando numeros y letras de 0 a 9 y letras de a f*/
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: #00FF00;
+    margin: 20px;
+}
+
+/*Valores HSL y HSLA: HSL define el color en términos de tono,
+saturación y luminosidad, y HSLA añade el valor de opacidad.*/
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: hsl(0, 40%, 75%);
+    margin: 20px;
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    margin: 20px;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+}
