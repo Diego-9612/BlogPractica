@@ -1,0 +1,51 @@
+div{
+    background-color: #ededed;
+    padding: 25px;
+    font-family: sans-serif;
+    border-left: 8px solid #999;
+    text-align: left;
+    width: 60%;
+}
+
+h1{
+    margin: 0;
+    text-align: left;
+    font-size: 24px;
+}
+
+span{
+    color: #999;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+p{
+    color: #555;
+}
+/* UNIDADES ABSOLUTAS
+
+Estas unidades tienen un valor fijo y no dependen del contexto en el que se utilicen.Son muy útiles cuando 
+deseas que un elemento tenga siempre el mismo tamaño sin importar la pantalla o el dispositivo.
+
+px (píxeles): Una unidad común para definir tamaños fijos en pantallas. Ejemplo: width: 200px;.
+
+UNIDADES RELATIVAS
+Estas unidades se ajustan según el contexto del elemento, como el tamaño de la pantalla, el tamaño del texto base,
+o el contenedor padre. Son esenciales para crear diseños fluidos y responsivos.
+
+Unidades Relativas Comunes
+
+% (porcentaje): Basado en el tamaño del contenedor padre. Ejemplo: width: 50%; asigna la mitad del ancho del contenedor.
+
+em: Basado en el tamaño de fuente del elemento padre. Si un elemento tiene un tamaño de fuente de 16px, entonces 1em = 16px o 2em = 32px
+
+rem (root em): Basado en el tamaño de fuente de la raíz (<html>). Si el tamaño de la fuente de la raíz es 16px, entonces 1rem = 16px, 
+independientemente del elemento padre.
+
+UNIDADES DE VISTA O VIEWPORT
+
+Estas unidades son relativas al tamaño del área visible del navegador, o viewport. Son muy útiles para lograr diseños responsivos.
+
+vw (viewport width): 1vw es igual al 1% del ancho del viewport.
+vh (viewport height): 1vh es igual al 1% de la altura del viewport.
+vmin y vmax: vmin usa el valor más pequeño entre el ancho y la altura del viewport, mientras que vmax usa el más grande.

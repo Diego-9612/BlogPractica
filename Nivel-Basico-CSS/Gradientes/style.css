@@ -1,0 +1,40 @@
+body{
+    background-color: red;
+    margin: 0;
+}
+
+.box{
+    background: linear-gradient(to top, #000, transparent); /*linear-gradient(to top color, color) define la direccion del gradiente*/
+    width: 500px;
+    margin: 0;
+    height: 500px;
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 6px solid red;
+
+}
+
+.box2{
+    background:radial-gradient(#000, transparent);
+    width: 500px;
+    margin: 0;
+    height: 500px;
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 6px solid red;
+
+}
+
+.box3{
+    background: conic-gradient(#000, transparent);
+    width: 500px;
+    margin: 0;
+    height: 500px;
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 6px solid red;
+
+}

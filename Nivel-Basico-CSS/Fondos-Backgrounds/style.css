@@ -1,0 +1,19 @@
+body{
+    background-color:rgb(137, 137, 190);
+}
+
+.box{
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    background: #000;
+    background-image: url(/Nivel-Basico-HTML/imagenes/imagen1.jpg);
+    /*Se ajusta a el tamaño del background del elemento*/
+    background-size: contain; /*cover se ajusta a la pantalla pero sin repetirse*/
+    background-position: center;/* top, bottom, left, right*/
+    background-repeat: no-repeat;/* hace que no se repita la imagen cuando esta con contain*/
+    background-attachment: fixed;
+}
+
+/*NOTA 
+Podemos definir todas las propiedades anteriores solo en background.*/
