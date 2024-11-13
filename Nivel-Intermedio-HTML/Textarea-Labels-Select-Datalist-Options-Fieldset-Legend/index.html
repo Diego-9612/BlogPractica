@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Textarea y Labels en HTML</title>
-    <link rel="stylesheet" href="/Nivel-Intermedio-HTML/Textarea-Labels/style.css" />
+    <link rel="stylesheet" href="/Nivel-Intermedio-HTML/Textarea-Labels-Select-Datalist-Options-Fieldset-Legend/style.css" />
 </head>
+
 <body>
     <!-- Formulario de contacto con varios campos, incluyendo input de texto, select, datalist y textarea -->
     <form>
         <h2>Formulario de Contacto</h2>
-        
-        <!-- Campo de entrada para el nombre completo -->
-        <div class="forms">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" placeholder="Nombre Completo" id="nombre" />
-        </div>
+        <fieldset>
+            <legend>Informacion Basica</legend>
+            <!-- Campo de entrada para el nombre completo -->
+            <div class="forms">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" placeholder="Nombre Completo" id="nombre" />
+            </div>
 
-        <!-- Campo de entrada para el correo electrónico -->
-        <div class="forms">
-            <label for="correo">Correo Electrónico</label>
-            <input type="email" placeholder="Correo Electrónico" id="correo" />
-        </div>
-
+            <!-- Campo de entrada para el correo electrónico -->
+            <div class="forms">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" placeholder="Correo Electrónico" id="correo" />
+            </div>
+            <div class="forms">
+                <label for="asunto">Asunto</label>
+                <input type="text" placeholder="Asunto" id="asunto" />
+            </div>
+        </fieldset>
         <!-- Menú desplegable para seleccionar el tipo de usuario -->
         <div class="forms">
             <label for="options">Tipo de usuario</label>
@@ -37,7 +44,7 @@
         <div class="forms">
             <label for="referente">Referente</label>
             <!-- Campo input asociado con el datalist "referente" -->
-            <input list="referente" name="referente" placeholder="un amigo">
+            <input list="referente" name="referente" placeholder="un amigo" />
             <!-- Lista de opciones sugeridas para el campo "Referente" -->
             <datalist id="referente" name="referenteusers">
                 <option value="Diego Guerrero">Programador</option>
@@ -53,4 +60,5 @@
         </div>
     </form>
 </body>
+
 </html>

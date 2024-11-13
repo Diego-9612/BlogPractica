@@ -23,6 +23,7 @@ form {
     box-shadow: 0 0 55px #fff2; /* Sombra clara alrededor del formulario */
     margin-top: 50px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .forms {
@@ -64,3 +65,14 @@ select{
     background: #222;
 }
 
+fieldset{
+    border-radius: 5px;
+    border: 1px solid #666;
+    padding: 0 20px 20px 20px;
+    margin: 20px;
+}
+
+legend{
+    padding: 0 6px;
+    color: #777;
+}
