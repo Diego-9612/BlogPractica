@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML Obsoletas y Alternativas</title>
+</head>
+
+<body>
+    <h1>Etiquetas HTML Obsoletas y Alternativas</h1>
+
+    <p>En HTML, algunas etiquetas y atributos han quedado obsoletos o desaconsejados debido a los avances en las mejores prácticas de accesibilidad, semántica y diseño. A continuación, te explico algunas de estas etiquetas y sus alternativas recomendadas.</p>
+
+    <h2>1. `<font>`</h2>
+    <p><strong>Descripción:</strong> La etiqueta <code>&lt;font&gt;</code> se utilizaba para definir estilos de fuente como el color, el tamaño y la familia de la fuente.</p>
+    <p><strong>Obsolescencia:</strong> No se recomienda su uso, ya que el estilo debe ser manejado por CSS.</p>
+    <p><strong>Alternativa:</strong> Utilizar CSS para cambiar la fuente y otros estilos relacionados.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;font color="red" size="5"&gt;Texto en rojo y tamaño grande&lt;/font&gt;
+
+<!-- Correcto -->
+&lt;p style="color: red; font-size: 24px;"&gt;Texto en rojo y tamaño grande&lt;/p&gt;
+    </code></pre>
+
+    <h2>2. `<center>`</h2>
+    <p><strong>Descripción:</strong> La etiqueta <code>&lt;center&gt;</code> se utilizaba para centrar contenido en la página.</p>
+    <p><strong>Obsolescencia:</strong> No se recomienda usarla, ya que la alineación debe hacerse a través de CSS.</p>
+    <p><strong>Alternativa:</strong> Utilizar la propiedad <code>text-align: center;</code> o <code>margin: auto;</code> en CSS.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;center&gt;Este texto está centrado&lt;/center&gt;
+
+<!-- Correcto -->
+&lt;p style="text-align: center;"&gt;Este texto está centrado&lt;/p&gt;
+    </code></pre>
+
+    <h2>3. `<b>` y `<i>`</h2>
+    <p><strong>Descripción:</strong> Las etiquetas <code>&lt;b&gt;</code> (negrita) y <code>&lt;i&gt;</code> (cursiva) se usaban para dar formato al texto visualmente, sin ningún significado semántico.</p>
+    <p><strong>Obsolescencia:</strong> Estas etiquetas no deben usarse por su falta de semántica. Debemos usar etiquetas que transmitan un significado.</p>
+    <p><strong>Alternativa:</strong> Utilizar <code>&lt;strong&gt;</code> para enfatizar texto (negrita semántica) y <code>&lt;em&gt;</code> para marcar texto en cursiva con énfasis.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;b&gt;Texto en negrita&lt;/b&gt;
+&lt;i&gt;Texto en cursiva&lt;/i&gt;
+
+<!-- Correcto -->
+&lt;strong&gt;Texto en negrita&lt;/strong&gt;
+&lt;em&gt;Texto en cursiva&lt;/em&gt;
+    </code></pre>
+
+    <h2>4. `<u>`</h2>
+    <p><strong>Descripción:</strong> Se usaba para subrayar texto.</p>
+    <p><strong>Obsolescencia:</strong> Se recomienda usar CSS para subrayar, ya que el subrayado puede confundirse con los enlaces.</p>
+    <p><strong>Alternativa:</strong> Usar <code>text-decoration: underline;</code> en CSS.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;u&gt;Texto subrayado&lt;/u&gt;
+
+<!-- Correcto -->
+&lt;p style="text-decoration: underline;"&gt;Texto subrayado&lt;/p&gt;
+    </code></pre>
+
+    <h2>5. `<strike>` / `<s>`</h2>
+    <p><strong>Descripción:</strong> Las etiquetas <code>&lt;strike&gt;</code> y <code>&lt;s&gt;</code> se utilizaban para mostrar texto tachado.</p>
+    <p><strong>Obsolescencia:</strong> Se ha desaconsejado su uso, ya que no tiene una semántica clara.</p>
+    <p><strong>Alternativa:</strong> Usar <code>&lt;del&gt;</code> para indicar que el contenido ha sido eliminado y <code>&lt;ins&gt;</code> para indicar contenido insertado.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;strike&gt;Texto tachado&lt;/strike&gt;
+
+<!-- Correcto -->
+&lt;del&gt;Texto tachado&lt;/del&gt;
+    </code></pre>
+
+    <h2>6. `<marquee>`</h2>
+    <p><strong>Descripción:</strong> Se usaba para crear texto o contenido en movimiento, desplazándose de un lado a otro en la pantalla.</p>
+    <p><strong>Obsolescencia:</strong> Esta etiqueta está completamente desaconsejada debido a su falta de accesibilidad y usabilidad.</p>
+    <p><strong>Alternativa:</strong> Se puede utilizar CSS para crear desplazamientos, pero es recomendable evitar estos efectos en la mayoría de los casos.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;marquee&gt;Texto en movimiento&lt;/marquee&gt;
+
+<!-- Correcto -->
+&lt;!-- Usar animaciones CSS si es necesario, pero evitar este tipo de efectos --&gt;
+    </code></pre>
+
+    <h2>7. `<blink>`</h2>
+    <p><strong>Descripción:</strong> Se utilizaba para hacer que el texto parpadeara.</p>
+    <p><strong>Obsolescencia:</strong> Similar a <code>&lt;marquee&gt;</code>, esta etiqueta se desaconseja debido a que resulta molesta para los usuarios, especialmente para personas con discapacidades visuales.</p>
+    <p><strong>Alternativa:</strong> Se recomienda evitar este tipo de efectos.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;blink&gt;Texto parpadeante&lt;/blink&gt;
+
+<!-- Correcto -->
+&lt;!-- Se recomienda evitar este tipo de efectos --&gt;
+    </code></pre>
+
+    <h2>8. `<applet>`</h2>
+    <p><strong>Descripción:</strong> Se usaba para insertar applets Java (pequeñas aplicaciones Java).</p>
+    <p><strong>Obsolescencia:</strong> No se recomienda, ya que el soporte para applets ha desaparecido en los navegadores modernos. Las aplicaciones web se han movido a tecnologías más modernas como JavaScript.</p>
+    <p><strong>Alternativa:</strong> Usar tecnologías modernas como JavaScript o HTML5.</p>
+    <pre><code>
+<!-- Obsoleto -->
+&lt;applet code="Applet.class" width="300" height="200"&gt;&lt;/applet&gt;
+
+<!-- Correcto -->
+&lt;!-- Usar JavaScript o tecnologías más modernas --&gt;
+    </code></pre>
+
+    <h2>Conclusión</h2>
+    <p>Es importante mantenerse al día con los estándares modernos de HTML y evitar usar etiquetas y atributos obsoletos. Las mejores prácticas actuales incluyen el uso de <strong>CSS</strong> para el diseño y la presentación, y <strong>JavaScript</strong> para la interactividad y los efectos. Esto asegura que las páginas web sean accesibles, rápidas y compatibles con los navegadores más recientes.</p>
+
+</body>
+
+</html>

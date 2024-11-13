@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: #eee;
+}
+
+details{
+    background-color: transparent;
+    border: 1px solid #ddd;
+    margin: 20px;
+}
+
+summary{
+    background-color: transparent;
+    padding: 9px;
+}
+
+p{
+    font-size: 14px;
+    padding: 10px;
+}

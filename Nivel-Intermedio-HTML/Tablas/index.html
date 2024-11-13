@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title> 
+    <link rel="stylesheet" href="/Nivel-Intermedio-HTML/Tablas/style.css"> 
+</head>
+
+<body>
+    <table>
+        <!-- <table>: Inicia la estructura de la tabla -->
+
+        <thead>
+            <!-- <thead>: Contiene el encabezado de la tabla -->
+            <tr>
+                <!-- <tr>: Define una fila en la tabla -->
+                <th>Producto</th>
+                <!-- <th>: Celda de encabezado; da formato en negrita y alinea el contenido en el centro -->
+                <th>Precio</th>
+                <th>Unidades</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- <tbody>: Contiene las filas de datos de la tabla -->
+            <tr>
+                <!-- Cada <tr> dentro de <tbody> representa una fila de datos -->
+                <td>Manzanas</td> <!-- <td>: Define una celda de datos estándar en la fila -->
+                <td>10 mil</td>
+                <td>kilos</td>
+            </tr>
+            <tr>
+                <td>Papa</td>
+                <td>20 mil</td>
+                <td>Kilo</td>
+            </tr>
+            <tr>
+                <td>Zanahoria</td>
+                <td>Libra</td> <!-- Este valor debería estar en la columna de "Unidades" para mantener la coherencia -->
+                <td>5 mil</td> <!-- Se recomienda intercambiar esta celda con la anterior -->
+            </tr>
+            <tr>
+                <td>Papaya</td>
+                <td>unidad</td>
+                <td>5 mil</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <!-- <tfoot>: Pie de la tabla, normalmente para totales o información adicional -->
+            <tr>
+                <th>Total</th> <!-- Celda de encabezado que indica "Total" -->
+                <td colspan="2">40 mil</td> <!-- Atributo colspan="2" permite que esta celda abarque dos columnas -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

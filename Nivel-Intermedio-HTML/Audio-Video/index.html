@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Video y Audio en HTML</title>
+</head>
+
+<body>
+    <!-- Elemento <video> para mostrar un video en la página -->
+    <video src="video.mp4" loop autoplay muted controls>
+        <!-- src: define la ubicación y el nombre del archivo de video -->
+        <!-- loop: hace que el video se repita continuamente al finalizar -->
+        <!-- autoplay: reproduce el video automáticamente al cargarse la página -->
+        <!-- muted: silencia el audio del video automáticamente (importante para autoplay) -->
+        <!-- controls: muestra los controles de video como play/pause, volumen, etc. -->
+        
+        <track src="captions.vvt" default kind="captions" srclang="es" label="Español (Latinoamérica)">
+        <!-- <track>: proporciona subtítulos o transcripciones opcionales para el video -->
+        <!-- src: ruta al archivo de subtítulos (aquí es "captions.vvt") -->
+        <!-- default: establece esta pista como la predeterminada para mostrar -->
+        <!-- kind="captions": indica que esta pista es un subtítulo -->
+        <!-- srclang="es": especifica el idioma del archivo de subtítulos, en este caso español -->
+        <!-- label: nombre mostrado en la selección de subtítulos -->
+        
+        <!-- Texto alternativo para navegadores que no admiten el elemento <video> -->
+        Tu navegador no soporta el video.
+    </video>
+
+    <!-- Elemento <audio> para reproducir audio en la página -->
+    <audio src="audio.mp3" loop autoplay muted controls>
+        <!-- src: ruta y nombre del archivo de audio que se reproducirá -->
+        <!-- loop: hace que el audio se repita al finalizar -->
+        <!-- autoplay: inicia automáticamente la reproducción del audio al cargar la página -->
+        <!-- muted: silencia el audio al cargarse (puede ser útil si autoplay está activado) -->
+        <!-- controls: muestra los controles de audio como play/pause y volumen -->
+
+        <!-- Texto alternativo para navegadores que no admiten el elemento <audio> -->
+        Tu navegador no soporta el audio.
+    </audio>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea y Labels en HTML</title>
+    <link rel="stylesheet" href="/Nivel-Intermedio-HTML/Enlaces-Avanzado/style.css" />
+</head>
+
+<body>
+    <!-- Formulario de contacto con varios campos, incluyendo input de texto, select, datalist y textarea -->
+    <form>
+        <h2>Formulario de Contacto</h2>
+        <fieldset>
+            <legend>Informacion Basica</legend>
+            <!-- Campo de entrada para el nombre completo -->
+            <div class="forms">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" placeholder="Nombre Completo" id="nombre" />
+            </div>
+
+            <!-- Campo de entrada para el correo electrónico -->
+            <div class="forms">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" placeholder="Correo Electrónico" id="correo" />
+            </div>
+            <div class="forms">
+                <label for="asunto">Asunto</label>
+                <input type="text" placeholder="Asunto" id="asunto" />
+            </div>
+        </fieldset>
+        <!-- Menú desplegable para seleccionar el tipo de usuario -->
+        <div class="forms">
+            <label for="options">Tipo de usuario</label>
+            <select name="type-of-user" id="options">
+                <option value="user1">Seguidor</option>
+                <option value="user2">Empresa</option>
+                <option value="user3">Otros</option>
+            </select>
+        </div>
+
+        <!-- Campo de entrada con lista de opciones predefinidas utilizando datalist -->
+        <div class="forms">
+            <label for="referente">Referente</label>
+            <!-- Campo input asociado con el datalist "referente" -->
+            <input list="referente" name="referente" placeholder="un amigo" />
+            <!-- Lista de opciones sugeridas para el campo "Referente" -->
+            <datalist id="referente" name="referenteusers">
+                <option value="Diego Guerrero">Programador</option>
+                <option value="Empresas"></option>
+                <option value="Otros"></option>
+            </datalist>
+        </div>
+
+        <!-- Campo de área de texto para que el usuario escriba su mensaje -->
+        <div class="forms">
+            <label for="mensaje">Mensaje</label>
+            <textarea placeholder="Escribe tu mensaje aquí" id="mensaje"></textarea>
+        </div>
+        <div class="forms">
+            <label for="terminos"> Acepto <a href="terms.html" target="_blank">terminos y condiciones</a>
+                <input type="checkbox" class="checkbox" id="terminos">
+            </label>
+            </div>
+    </form>
+</body>
+
+</html>
