@@ -1,0 +1,36 @@
+/* Estilo base para el <body> (raíz del documento) */
+body {
+    font-family: Arial, sans-serif; /* Heredable */
+    color: darkblue; /* Heredable */
+    background-color: lightgray; /* No heredable */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+.parent {
+    border: 2px solid black; /* No se hereda */
+    padding: 20px;
+    background-color: white; /* No heredable */
+}
+
+/* Estilo aplicado a los elementos hijos */
+.child {
+    color: inherit; /* Hereda el color del padre explícitamente */
+    padding: 10px;
+    border: inherit; /* Hereda el borde del padre explícitamente */
+}
+
+/* Sobrescribiendo la herencia con valores predeterminados */
+.reset {
+    color: initial; /* Restablece al valor predeterminado del navegador */
+    font-family: initial; /* Restablece la fuente predeterminada */
+}
+
+/* Estilo específico para el pie de página */
+footer {
+    color: gray; /* Sobrescribe la herencia */
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}

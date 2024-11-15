@@ -1,0 +1,45 @@
+/* Selecciona una imagen específica usando el atributo `src` con un valor exacto */
+img[src="/Nivel-Basico-HTML/imagenes/imagen1.jpg"] {
+    width: 50%;
+}
+
+/* Selecciona todas las imágenes cuyo atributo `src` termina con "png" */
+img[src$="png"] {
+    width: 50%;
+}
+
+/* Selecciona todas las imágenes cuyo atributo `src` comienza con "/Nivel-Basico-HTML/imagenes/imagen2" */
+img[src^="/Nivel-Basico-HTML/imagenes/imagen2"] {
+    width: 50%;
+}
+
+/* Selecciona todos los elementos <li> dentro de una lista <ul> */
+ul li {
+    color: blue;
+}
+
+/* Selecciona cualquier elemento <strong> dentro de una lista <ul> */
+ul strong {
+    color: brown;
+}
+
+/* Selecciona únicamente el <strong> que es un hijo directo de <ul> */
+ul>strong {
+    color: blueviolet;
+}
+
+/* Selecciona el <p> que está inmediatamente después de un <h1> */
+h1+p {
+    color: salmon;
+}
+
+/* Selecciona todos los <p> que son hermanos de un <h2>, sin importar cuántos */
+h2~p {
+    color: aquamarine;
+}
+
+/* Selecciona el segundo <p> inmediatamente después de un <h3> */
+h3+p+p {
+    color: azure;
+    background-color: black;
+}
