@@ -1,0 +1,57 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para ejemplos */
+.text-box {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+/* Ejemplo de white-space: normal */
+.text-box--normal {
+    white-space: normal;
+    background-color: #e0f7fa;
+}
+
+/* Ejemplo de white-space: nowrap */
+.text-box--nowrap {
+    white-space: nowrap;
+    background-color: #ffe0b2;
+}
+
+/* Ejemplo de text-overflow: ellipsis */
+.text-box--ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #e1bee7;
+}
+
+/* Ejemplo de overflow-wrap: break-word */
+.text-box--break-word {
+    overflow-wrap: break-word;
+    background-color: #c8e6c9;
+}
+
+/* Ejemplo de line-clamp */
+.text-box--line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 1; /* Limita a 3 líneas */
+    overflow: hidden;
+    background-color: #ffcdd2;
+}

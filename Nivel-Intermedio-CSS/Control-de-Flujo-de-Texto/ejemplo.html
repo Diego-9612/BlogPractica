@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Flujo de Texto</title>
+    <link rel="stylesheet" href="/Nivel-Intermedio-CSS/Control-de-Flujo-de-Texto/ejemplo.css">
+</head>
+<body>
+    <h1>Ejemplo de Control de Flujo de Texto</h1>
+
+    <div class="text-box text-box--normal">
+        <p>White-space: normal. Este es un ejemplo de texto largo que se ajusta automáticamente al ancho del contenedor.</p>
+    </div>
+
+    <div class="text-box text-box--nowrap">
+        <p>White-space: nowrap. Este texto no permite saltos de línea y se mantiene en una sola línea horizontal, incluso si se desborda.</p>
+    </div>
+
+    <div class="text-box text-box--ellipsis">
+        <p>Text-overflow: ellipsis. Este texto se truncará con puntos suspensivos si no cabe en el contenedor.</p>
+    </div>
+
+    <div class="text-box text-box--break-word">
+        <p>Overflow-wrap: break-word. Una palabraextraordinariamentelargaquedesbordaría se ajustará para no romper el diseño.</p>
+    </div>
+
+    <div class="text-box text-box--line-clamp">
+        <p>Line-clamp: este texto estará limitado a tres líneas. Si excede ese límite, se mostrará una elipsis al final.</p>
+    </div>
+</body>
+</html>

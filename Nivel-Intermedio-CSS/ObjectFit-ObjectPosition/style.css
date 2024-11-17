@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+.img{
+    width: 400px;
+    height: 200px;
+    border: 2px solid #000;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+/*Propiedad por defecto que se ajusta al contenido*/
+.propiedad1{
+    object-fit: fill;
+}
+
+/*Hace que la imagen entre al menos una vez en la resolucion que le dimos*/
+.propiedad2{
+    object-fit: contain;
+}
+
+/*Adaptarse a todo la resolucion */
+.propiedad3{
+    object-fit: cover;
+}
+
+/*Adaptarse a la direccion que definimos top left o button*/
+.propiedad4{
+    object-position: top;
+}
+

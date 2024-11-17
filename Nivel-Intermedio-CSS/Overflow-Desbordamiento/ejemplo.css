@@ -1,0 +1,46 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las cajas */
+.box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid black; 
+    margin: 20px auto;
+    padding: 10px;
+    overflow: visible; /* Valor inicial, sobrescrito en clases específicas */
+}
+
+/* Desbordamiento visible */
+.box-visible {
+    overflow: visible; /* El contenido desbordado es visible */
+    background-color: #ffe0e0; /* Fondo para resaltar */
+}
+
+/* Desbordamiento oculto */
+.box-hidden {
+    overflow: hidden; /* El contenido desbordado no se muestra */
+    background-color: #e0ffe0;
+}
+
+/* Desbordamiento con desplazamiento */
+.box-scroll {
+    overflow: scroll; /* Aparecen barras de desplazamiento */
+    background-color: #e0e0ff;
+}
+
+/* Desbordamiento automático */
+.box-auto {
+    overflow: auto; /* Las barras aparecen solo si es necesario */
+    background-color: #ffffe0;
+}

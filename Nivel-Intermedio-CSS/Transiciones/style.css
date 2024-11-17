@@ -1,0 +1,42 @@
+/* Estilo global para el documento */
+body {
+    margin: 0; 
+    font-family: sans-serif; 
+}
+
+/* Estilo para la caja principal */
+.box {
+    width: 200px; 
+    height: 200px; 
+    background-color: red; 
+    margin: auto; 
+    margin-top: 50px; 
+    font-size: 60px; 
+    text-align: center; 
+    font-weight: bold; 
+    transition-property: color; /* Especifica que la transición afectará al color del texto */
+    transition-duration: 1s; /* La transición durará 1 segundo */
+    transition-delay: 2s; /* Se retrasa el inicio de la transición por 2 segundos */
+    color: #a22; /* Color inicial del texto (rojo oscuro) */
+}
+
+/* Efecto de la transición al pasar el cursor sobre la caja */
+.box:hover {
+    color: aliceblue; /* Cambia el color del texto a un azul claro */
+}
+
+/* Estilo para la caja pequeña que se moverá */
+.box__movi {
+    width: 50px;
+    height: 50px; 
+    transition-property: left; /* Especifica que la transición afectará a la posición horizontal */
+    transition-duration: 2s; /* La transición durará 2 segundos */
+    transition-timing-function: cubic-bezier(.14, .86, .32, .84); /* Ajusta la velocidad del movimiento con una curva personalizada */
+    position: relative; /* Permite mover la caja relativa a su posición normal */
+    left: 0; /* Posición inicial de la caja (alineada al borde izquierdo) */
+}
+
+/* Efecto de la transición al pasar el cursor sobre el cuerpo */
+body:hover .box__movi {
+    left: 400px; /* Mueve la caja 400px hacia la derecha */
+}
