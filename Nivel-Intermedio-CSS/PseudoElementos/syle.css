@@ -1,0 +1,26 @@
+div{
+    padding: 20px;
+}
+
+h1::first-letter{
+    color: red;
+    font-size: 50px;
+    letter-spacing: -5px;
+}
+
+P::first-line{
+    color: red;
+}
+
+P::selection{
+    background-color: aqua;
+    color: blue;
+}
+
+input::placeholder{
+    color: blue;
+}
+
+li::marker{
+    color: blueviolet;
+}

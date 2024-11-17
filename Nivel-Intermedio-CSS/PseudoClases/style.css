@@ -1,0 +1,65 @@
+
+h1{
+    color: blueviolet;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+/*Cuando pasamos el mause por encima del h1*/
+h1:hover{
+    color: seagreen;
+    background-color: aquamarine;
+}
+
+/*Cuando damos click sobre el elemento */
+h2:active{
+    color: blue;
+    background-color: lightblue;
+
+}
+
+/*Seleccionar elementos especificos */
+
+/* Seleccionar el Primer elemento */
+li:first-child{
+    color: brown;
+}
+
+/*Seleccionar el ultimo elemento*/
+li:last-child{
+    color: blue;
+}
+
+/*Seleccionar elementos intermedios */
+li:nth-child(2){
+    color: yellow;
+}
+
+/*Seleccionar varios elementos de dos en dos o de tres en tres (uno si uno no )*/
+ol > li:nth-child(2n){
+    color: blue;
+}
+
+/*Como excluir un elemento */
+
+.lista li:not(.excluir){
+    color: black;
+}
+
+/*Seleccionar elementos en caso de que este vacio*/
+/*Si esta vacio estara de color verde de lo contrario sera blanco*/
+div:empty{
+    background-color: greenyellow;
+    width: 20px;
+    padding: 30px;
+}
+
+/*Enlaces no visitados */
+a:link{
+    color: darkblue;
+}
+
+/*Enlaces visitados*/
+a:visited{
+    color: yellowgreen;
+}

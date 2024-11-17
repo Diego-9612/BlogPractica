@@ -1,0 +1,31 @@
+/* Estilo general para todos los elementos (universal, especificidad: 0) */
+* {
+    color: gray;
+}
+
+/* Estilo para todos los párrafos (especificidad: 1) */
+p {
+    color: black;
+    font-size: 16px;
+}
+
+/* Estilo para elementos con clase "parrafo" (especificidad: 10) */
+.parrafo {
+    color: blue; /* Gana sobre "p" porque es más específico */
+    font-weight: bold;
+}
+
+/* Estilo para el ID "titulo-principal" (especificidad: 100) */
+#titulo-principal {
+    color: red; /* Gana sobre cualquier regla menos una en línea o `!important` */
+}
+
+/* Estilo marcado como importante (tiene prioridad absoluta) */
+.titulo {
+    color: green !important;
+}
+
+/* Selector de clase combinado con pseudoclase (especificidad: 20) */
+.destacado:hover {
+    text-decoration: underline;
+}

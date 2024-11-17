@@ -1,0 +1,30 @@
+/* La pseudoclase :is() permite agrupar selectores */
+/* Aplica el mismo estilo a <p> dentro de <div> o <section> */
+:is(div, section) p {
+    font-size: 1.2em;
+    color: teal;
+}
+
+/* La pseudoclase :has() selecciona elementos que contienen hijos específicos */
+/* Selecciona <div> que tienen un <p> con la clase "highlight" */
+div:has(p.highlight) {
+    background-color: lightyellow;
+    border: 2px solid gold;
+    padding: 10px;
+}
+
+/* La pseudoclase :where() permite escribir selectores con menor especificidad */
+/* Aplica estilo a los enlaces con las clases "btn" o "special" */
+:where(a.btn, a.special) {
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: lightblue;
+    color: navy;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Elimina el subrayado de todos los enlaces al pasar el mouse */
+a:hover {
+    text-decoration: none;
+}

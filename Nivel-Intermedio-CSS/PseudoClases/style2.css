@@ -1,0 +1,49 @@
+/* Estilo al pasar el mouse sobre el botón */
+button:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+/* Estilo cuando el input está enfocado */
+input:focus {
+    border: 2px solid blue;
+}
+
+/* Aplica estilo solo al primer elemento <li> */
+ul li:first-child {
+    font-weight: bold;
+    color: green;
+}
+
+/* Aplica estilo al último elemento <li> */
+ul li:last-child {
+    font-style: italic;
+    color: orange;
+}
+
+/* Aplica estilo a los elementos impares dentro de la lista */
+ul li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/* Aplica estilo a los elementos pares dentro de la lista */
+ul li:nth-child(even) {
+    background-color: lightyellow;
+}
+
+/* Aplica estilo solo a enlaces con la clase "especial" */
+a.especial {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilo para enlaces al pasar el mouse */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para elementos que no tienen la clase "especial" */
+a:not(.especial) {
+    font-style: italic;
+    color: blue;
+}
