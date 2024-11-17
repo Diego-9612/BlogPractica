@@ -1,0 +1,44 @@
+.contenedor{
+    border: 1px solid #000;
+    margin: 20px;
+
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: aliceblue;
+}
+
+.box--blue{
+    background-color: blue;
+}
+
+.box--green{
+    background-color: green;
+}
+
+.box--absolute1{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenedor--absolute{
+    position: relative;
+}
+
+.box--absolute2{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box--absolute3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

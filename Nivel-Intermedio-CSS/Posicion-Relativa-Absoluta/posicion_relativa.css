@@ -1,0 +1,55 @@
+body {
+    background-color: aliceblue;
+    margin: 0; 
+}
+
+.box {
+    color: aliceblue; 
+    width: 60px; 
+    height: 60px;
+    background-color: red;
+    position: relative; /* Posiciona las cajas en relación con su posición inicial */
+}
+
+/* Estilo para Caja 2 (box--blue) */
+.box--blue {
+    background-color: blue; 
+    top: -20px; /* Desplaza la caja hacia arriba 20px desde su posición inicial */
+    left: 50px; /* Desplaza la caja 50px hacia la derecha */
+}
+
+/* Estilo para Caja 3 (box--green) */
+.box--green {
+    background-color: green; 
+    bottom: 60px; /* Desplaza hacia arriba 60px */
+    left: 80px; /* Desplaza hacia la derecha 80px */
+}
+
+/* Estilo para la primera caja (Caja 1) */
+.box:first-child {
+    top: 20px; /* Desplaza hacia abajo 20px */
+    left: 20px; /* Desplaza hacia la derecha 20px */
+}
+
+/* Estilo para Caja 4 (box--yellow) */
+.box--yellow {
+    background-color: yellow; 
+    color: black;
+    left: 145px; /* Desplaza 145px hacia la derecha */
+    z-index: 20; /* Asegura que esta caja se superpone a otras con menor z-index */
+}
+
+/* Estilo para Caja 5 (box--orange) */
+.box--orange {
+    background-color: orange; 
+    top: -30px; /* Desplaza hacia arriba 30px */
+    left: 100px; /* Desplaza 100px hacia la derecha */
+    z-index: 10; /* Esta caja está detrás de la caja amarilla */
+}
+
+/* Estilo para Caja 6 (box--black) */
+.box--black {
+    background-color: black; 
+    left: 55px; /* Desplaza hacia la derecha 55px */
+    bottom: 60px; /* Desplaza hacia arriba 60px */
+}

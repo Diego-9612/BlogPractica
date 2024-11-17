@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    padding: 150px;
+    background-color: blue;
+    position:relative ;
+}
+
+.box{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    background-color: aliceblue;
+    border: 1px solid #000;
+    border-right: 0;
+    box-shadow: 0px 0px 40px #000;
+}
+
+.box-fixed{
+    height: 60px;
+    width: 200px;
+    background-color: red;
+    position: sticky;
+    top: 20px;
+    z-index: 40;
+}
