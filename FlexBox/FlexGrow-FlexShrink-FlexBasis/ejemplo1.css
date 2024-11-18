@@ -1,0 +1,50 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Contenedor Flex */
+.flex-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+/* Elementos Flex */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo inicial */
+.box--1 {
+    background-color: #0078d7;
+    flex: 1 1 150px; /* Crece, se encoge y tiene un tamaño base de 150px */
+}
+
+.box--2 {
+    background-color: #d70057;
+    flex: 2 1 100px; /* Crece al doble de velocidad que la caja 1, tamaño base 100px */
+}
+
+.box--3 {
+    background-color: #ffaa00;
+    flex: 1 0 200px; /* Crece igual que la caja 1, pero no se encoge, tamaño base 200px */
+}

@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a nuevas filas si es necesario */
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    width: 80%;
+    height: 60%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+/* Estilos de las cajas */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* Aplicando align-self a los elementos específicos */
+.box-1 {
+    align-self: flex-start; /* Alinea Caja 1 al inicio del eje transversal */
+}
+
+.box-2 {
+    align-self: center; /* Alinea Caja 2 al centro del eje transversal */
+}
+
+.box-3 {
+    align-self: flex-end; /* Alinea Caja 3 al final del eje transversal */
+}
+
+.box-4 {
+    align-self: baseline; /* Alinea Caja 4 sobre la línea base del contenedor */
+}
+
+.box-5 {
+    align-self: stretch; /* Estira Caja 5 para llenar el espacio transversal */
+}
