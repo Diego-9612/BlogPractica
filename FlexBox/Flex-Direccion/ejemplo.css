@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex; /* Activa Flexbox */
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #ccc;
+    max-width: 400px;
+    background-color: #fff;
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: center; /* Centra los elementos en el eje cruzado */
+    min-height: 100px;
+}
+
+/* Elementos dentro del contenedor */
+.item {
+    width: 50px;
+    height: 50px;
+    background-color: #0078d7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Contenedor con flex-direction: row (predeterminado) */
+.row {
+    flex-direction: row; /* Los elementos se colocan en una fila de izquierda a derecha */
+}
+
+/* Contenedor con flex-direction: row-reverse */
+.row-reverse {
+    flex-direction: row-reverse; /* Los elementos se colocan en una fila de derecha a izquierda */
+}
+
+/* Contenedor con flex-direction: column */
+.column {
+    flex-direction: column; /* Los elementos se colocan en una columna, de arriba hacia abajo */
+}
+
+/* Contenedor con flex-direction: column-reverse */
+.column-reverse {
+    flex-direction: column-reverse; /* Los elementos se colocan en una columna, de abajo hacia arriba */
+}

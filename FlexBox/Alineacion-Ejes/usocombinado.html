@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Combinado: Justify y Align</title>
+    <link rel="stylesheet" href="/FlexBox/Alineacion-Ejes/usocombinado.css">
+</head>
+<body>
+    <h1>Uso Combinado de Justify-Content y Align-Items</h1>
+
+    <!-- Ejemplo de alineación combinada -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <!-- Contenedor de alineaciones diferentes -->
+    <div class="controls">
+        <button onclick="changeAlign('flex-start', 'flex-start')">Inicio-Inicio</button>
+        <button onclick="changeAlign('center', 'center')">Centro-Centro</button>
+        <button onclick="changeAlign('flex-end', 'flex-end')">Final-Final</button>
+        <button onclick="changeAlign('space-between', 'center')">Entre Espacios-Centro</button>
+        <button onclick="changeAlign('space-around', 'flex-start')">Alrededor-Inicio</button>
+        <button onclick="changeAlign('space-evenly', 'stretch')">Espaciado Igual-Estirar</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Contenedor Flex */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+}
+
+/* Elementos Flex */
+.item {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #0078d7;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Orden personalizado */
+.item--1 {
+    order: 3;
+}
+
+.item--2 {
+    order: 1;
+}
+
+.item--3 {
+    order: 5;
+}
+
+.item--4 {
+    order: 2;
+}
+
+.item--5 {
+    order: 4;
+}
+
+/* Estilo adicional */
+.item:hover {
+    transform: scale(1.1);
+    background-color: #0056a3;
+}

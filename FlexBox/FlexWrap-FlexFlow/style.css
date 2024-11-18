@@ -1,0 +1,20 @@
+body{
+    margin: 10px;
+    font-family: sans-serif;
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flex-item{
+    background-color: #800;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 100px;
+    direction: rtl;
+}

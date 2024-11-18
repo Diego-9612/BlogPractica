@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor */
+.container {
+    display: flex;
+    border: 2px solid #ccc;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px;
+    height: 100px;
+    background-color: #fff;
+}
+
+/* Estilo de los elementos flexibles */
+.item {
+    width: 60px;
+    height: 60px;
+    background-color: #0078d7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Diferentes alineaciones con justify-content */
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}

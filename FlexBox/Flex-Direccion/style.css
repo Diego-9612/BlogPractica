@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flex-item{
+    width: 150px;
+    height: 150px;
+    background-color: #911;
+    margin: 10px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+.flex-item:first-child{
+    
+    background-color: #f77;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction:row ;
+}
+
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+
+.flex-column{
+    flex-direction: column;
+    direction: rtl;
+}

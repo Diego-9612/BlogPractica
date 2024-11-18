@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    padding: 10px;
+    max-width: 600px;
+    background-color: #fff;
+    min-height: 150px;
+}
+
+/* Estilo de los elementos */
+.item {
+    width: 80px;
+    height: 80px;
+    background-color: #0078d7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* nowrap: No se envuelven los elementos */
+.nowrap {
+    flex-wrap: nowrap; /* Todos los elementos en una sola línea */
+}
+
+/* wrap: Los elementos se envuelven */
+.wrap {
+    flex-wrap: wrap; /* Los elementos se colocan en filas adicionales si es necesario */
+}
+
+/* wrap-reverse: Envuelve pero en orden inverso */
+.wrap-reverse {
+    flex-wrap: wrap-reverse; /* Las líneas adicionales se colocan arriba */
+}
+
+/* flex-flow: combina flex-direction y flex-wrap */
+.flow {
+    flex-flow: row wrap; /* Combina dirección en fila y permite envolver */
+}
