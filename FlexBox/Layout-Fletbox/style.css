@@ -1,0 +1,136 @@
+body{
+    margin: 0;  /* Elimina el margen por defecto del body */
+    font-family: Arial, Helvetica, sans-serif ;
+    box-sizing: border-box; /* Cambia el modelo de caja para incluir el padding y el borde en el tamaño total del elemento */
+    background-color: #154c79;
+    color: #fff;
+}
+
+/*-------- Header Seccion --------- */
+
+.header{
+    min-height: 100vh;
+    box-sizing: border-box; /* Usa el modelo de caja para manejar el tamaño correctamente */
+    background-image: url("/Nivel-Basico-HTML/imagenes/header.jpg");
+    display: flex;  /* Usa flexbox para alinear los elementos hijos */
+    background-size: cover; /* Escala la imagen de fondo para cubrir todo el espacio disponible */
+    background-position: center;
+    position: relative
+}
+
+.header__overlay{
+    min-height: 100vh;
+    width: 100%;
+    background-color:rgba(27, 24, 42, 0.4);
+    position: absolute;
+    z-index: 1; /* Asegura que este elemento esté por encima del fondo pero por debajo del contenido */
+}
+
+.header__item-container{
+    position: relative;
+    z-index: 10; /* Coloca este contenedor por encima de la superposición */
+    margin: auto;
+    text-align: center;
+    max-width: 700px;;
+
+}
+
+.header__item-container p {
+    text-wrap: pretty;
+}
+
+.header__img{
+    min-width: 250px;
+    max-width: 30%;
+    border-radius: 100%;
+    border: 2px solid #fff;
+}
+
+h1{
+    margin: 0;
+    font-size: 3.6rem;
+    text-wrap: balance;
+}
+
+/*--------  Navbar Seccion --------- */
+
+.nav{
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+    justify-content: center;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 0 25px #0006;
+
+}
+
+.nav__ul{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav__item{
+    list-style: none;
+}
+
+.nav__logo--container. .nav__ul--container{
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav__ul--container{
+    flex-grow: 4;
+}
+
+.nav__link{
+    color:#154c79;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 0;
+    transition: background-color 0.3s, border-radius 0.24s;
+    margin: 5px;
+    outline: 0.3s;
+    outline-offset: 0.3s;
+
+}
+
+.nav__link:hover{
+    background-color: #1b5e95;
+    border-radius: 20px;
+    color: #fff;
+    outline: 2px solid #154c79 ;
+    outline-offset: 8px;
+}
+
+.link--login{
+    background-color: #154c79;
+    border-radius: 20px;
+    padding-left: 0px 50px;
+    margin-left: 5px;
+}
+
+.link--login:hover{
+    background-color:#154c79;
+    outline: none;
+}
+
+.nav__logo{
+width:70px;
+margin: 10px;
+}
+
+/*-------- Main Seccion ---------*/
+
+main{
+    max-width: 800px;
+    margin: auto;
+    font-size: 30px;
+    text-wrap: pretty;
+}
