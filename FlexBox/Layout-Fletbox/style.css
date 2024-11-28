@@ -79,7 +79,7 @@ h1{
     list-style: none;
 }
 
-.nav__logo--container. .nav__ul--container{
+.nav__logo--container, .nav__ul--container{
     flex-grow: 1;
     text-align: center;
 }
