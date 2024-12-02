@@ -1,0 +1,102 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Definición del contenedor de la tarjeta */
+.card-container {
+    container-type: inline-size; /* Habilitar el contenedor como relativo */
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos básicos de la tarjeta */
+.card {
+    display: flex;
+    flex-direction: column; /* Diseño inicial */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Imagen de perfil */
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    font-size: 0.9rem;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card-content .description {
+    margin: 10px 0 0;
+    color: #666;
+    display: none; /* Oculto por defecto */
+}
+
+/* Container Queries: adaptar el diseño según el tamaño del contenedor */
+
+/* Diseño mediano: Mostrar descripción y ajustar tamaños */
+@container (min-width: 400px) {
+    .card {
+        flex-direction: row; /* Cambiar a diseño horizontal */
+        text-align: left;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        margin: 0 15px 0 0;
+    }
+
+    .card-content {
+        font-size: 1rem;
+    }
+
+    .card-content .description {
+        display: block; /* Mostrar descripción */
+    }
+}
+
+/* Diseño grande: Ampliar la tarjeta y ajustar los estilos */
+@container (min-width: 600px) {
+    .card-container {
+        max-width: 600px; /* Ancho máximo de la tarjeta */
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-content .description {
+        font-size: 1.1rem;
+        color: #444;
+    }
+}

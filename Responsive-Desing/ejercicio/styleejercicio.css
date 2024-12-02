@@ -1,0 +1,59 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #154c79;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Media Query para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .header {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 1200px) {
+    .header {
+        background-color: #0c3b58;
+    }
+
+    .nav ul {
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+}

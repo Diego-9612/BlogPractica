@@ -1,0 +1,30 @@
+/* Definir el contenedor */
+.container {
+    container-type: inline-size;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #48e;
+}
+
+/* Estilos básicos para el contenido */
+.content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Container Query para cambiar el tamaño del contenido */
+@container (min-width: 400px) {
+    .content {
+        font-size: 1.5rem;
+        background-color: #d0e8ff;
+    }
+}
+
+@container (min-width: 600px) {
+    .content {
+        font-size: 2rem;
+        background-color: #b0c8ff;
+    }
+}

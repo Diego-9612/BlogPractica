@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    display: flex; /* Esto permite que el cuerpo del documento sea un contenedor flex, lo que te da acceso a todas las propiedades de Flexbox para organizar su contenido.*/
+    flex-direction: column; /*Establece que los elementos secundarios (como header, main-wrapper, y footer) se apilen verticalmente.*/
+    align-items: flex-start;/* Alinea los elementos hijos del cuerpo al inicio del eje transversal (eje horizontal).*/
+    min-height: 100vh; /*Esto asegura que el cuerpo ocupe todo el alto de la ventana del navegador.*/
+
+}
+
+div, body, header, nav, ul, footer { 
+    box-sizing: border-box; /* Asegura que el relleno y el borde se incluyan dentro del cálculo del ancho y la altura de los elementos, lo que facilita el control de las dimensiones.*/
+}
+
+.main-wrapper, header, footer{
+    width: 100%; /* Los elementos .main-wrapper, header, y footer ocupan todo el ancho de la ventana.*/
+}
+
+/* HEADER */
+
+header{
+    background-color: #48e;
+}
+
+.main-navbar ul{
+    display: flex; /* Esto convierte a los elementos ul en un contenedor flex, haciendo que los li se dispongan en una fila.*/
+    padding: 0;
+    justify-content: center;
+}
+
+.main-navbar li{
+    list-style: none; /* Elimina los puntos de lista de los elementos li.*/
+    margin: 5px;
+}
+
+.main-navbar a {
+color: #fff;
+display: inline-block;
+padding: 6px 9px;
+
+}
+
+nav a {
+    text-decoration: none; /*Elimina los subrayados predeterminados de los enlaces.*/
+    
+}
+
+/* MAIN SECTION */
+
+.main-wrapper{
+    display: flex; /* Utilizas Flexbox para organizar los elementos en la estructura principal (el área central, las barras laterales y el pie de página).*/
+    flex-grow: 1; /* Esto permite que .main-wrapper ocupe todo el espacio disponible en el eje principal.*/
+}
+aside, main {
+    padding: 10px 20px;
+}
+
+.main-wrapper aside{
+    flex-wrap: wrap; /*permite que los elementos hijos dentro de .main-wrapper puedan envolver y reorganizarse si es necesario.*/
+}
+
+.secondary-navbar{
+    min-width: 12rem;
+    text-align: center;
+}
+
+.secondary-navbar ul{
+    padding: 0;
+}
+
+.secondary-navbar li{
+    list-style: none;
+}
+
+.secondary-navbar a {
+    color: #48e;
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+aside:last-child{
+    min-width: 10rem;
+}
+
+/* FOOTER */ 
+
+footer{
+    margin-top: auto;/*sto empuja el pie de página hacia la parte inferior de la página si el contenido anterior es más corto que la altura de la ventana, asegurando que el pie de página siempre quede en la parte inferior del viewport.*/
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+}
+
+@media screen and (max-width: 900px){
+    aside:last-child{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .main-wrapper{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

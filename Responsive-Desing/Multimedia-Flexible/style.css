@@ -1,24 +1,46 @@
-body{
+/* Configuración general */
+body {
     margin: 0;
-    
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-div, body {
-    box-sizing: border-box;
+header {
+    text-align: center;
+    background-color: #154c79;
+    color: #fff;
+    padding: 20px;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+.content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.contenedor{
-    width: 100%;
-    aspect-ratio: 19/6;
-    background-color: blue;
-
+/* Bloque de texto */
+.text-block {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-video{
-    max-width: 100%;
+/* Imágenes flexibles */
+.responsive-image {
+    max-width: 100%; /* La imagen nunca será más grande que su contenedor */
+    height: auto;    /* Mantiene la relación de aspecto */
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+/* Videos flexibles */
+.responsive-video {
+    max-width: 100%; /* Ajusta el ancho al contenedor */
+    aspect-ratio: 16/9; /* Relación de aspecto 16:9 */
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
 }
