@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual ancho */
+    grid-auto-rows: 100px; /* Altura automática de las filas */
+    gap: 10px; /* Espaciado entre elementos */
+    grid-auto-flow: row dense; /* Rellena los huecos en orden de filas */
+    background-color: #ddd;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.item {
+    background-color: #48e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-1 {
+    grid-column: span 2; /* Ocupa dos columnas */
+    grid-row: span 2;    /* Ocupa dos filas */
+}
+
+.item-2 {
+    grid-column: span 2;
+}
+
+.item-5 {
+    grid-column: span 3; /* Ocupa tres columnas */
+}
+
+.item-8 {
+    grid-column: span 2 ;    /* Ocupa dos filas */
+}

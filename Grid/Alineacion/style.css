@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #48e;
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.grid-item:hover {
+    opacity: 0.74;
+}

@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    grid-auto-rows: 150px;
+    grid-auto-flow: row;
+    grid-auto-columns: 100px;
+    margin: auto;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.grid-item{
+    background-color: #48e;
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+}
