@@ -1,28 +1,47 @@
+/* General styles */
 body {
     margin: 0;
     padding: 0;
-
+    display: flex; /* Alineación global del grid */
+    justify-content: center; /* Centra el grid horizontalmente */
+    align-items: center; /* Centra el grid verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
 }
 
-body, div {
-    box-sizing: border-box;
-}
-
-.grid {
+/* Grid container */
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: repeat(3, 250px);
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(3, 150px); /* 3 columnas de 150px cada una */
+    grid-template-rows: repeat(2, 150px); /* 2 filas de 150px cada una */
+    gap: 20px; /* Espacio entre las celdas */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    /* Alineación global de celdas */
+    align-items: stretch; /* Por defecto, cada celda estira su contenido verticalmente */
+    justify-items: stretch; /* Por defecto, cada celda estira su contenido horizontalmente */
 }
 
-.grid-item {
+/* Grid items */
+.item {
     background-color: #48e;
-    font-size: 30px;
-    max-width: 100%;
-    border-radius: 16px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex; /* Permite controlar la alineación dentro de la celda */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.grid-item:hover {
-    opacity: 0.74;
+/* Alineación específica para un elemento */
+.special {
+    align-self: start; /* Alinea al inicio vertical de la celda */
+    justify-self: end; /* Alinea al final horizontal de la celda */
+    background-color: #e84c3d;
+    font-size: 2rem;
 }

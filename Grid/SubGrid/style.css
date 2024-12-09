@@ -1,0 +1,68 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    width: 80%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    grid-column: 1 / -1;
+    background-color: #48e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+main {
+    background-color: #e8f4f8;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+footer {
+    grid-column: 1 / -1;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Subgrid */
+.subgrid {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-auto-rows: 50px;
+    gap: 10px;
+}
+
+.subitem {
+    background-color: #48e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
