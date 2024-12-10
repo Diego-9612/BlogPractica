@@ -1,0 +1,454 @@
+/* Configuraciones Iniciales */
+
+* {
+    box-sizing: border-box; /* Aplica el modelo de caja "border-box" a todos los elementos, lo que hace que el ancho total de un elemento incluya padding y borde. */
+    scroll-behavior: smooth; /*Define un comportamiento de desplazamiento suave para los enlaces */
+}
+
+/*Estilo base para el cuerpo de la página.*/
+body {
+    font-family: Georgia;
+    background-color: #e2eaff; /* Aplica un color de fondo suave a toda la página. */
+    color: #101632dd; /* Establece un color para el texto principal con algo de transparencia. */
+}
+
+/* Reseteo general para márgenes y paddings en elementos comunes para evitar inconsistencias entre navegadores.*/
+body,
+div,
+ul,
+nav,
+header,
+a,
+li,
+label,
+input, 
+img, main, h1, p, h2, span, section, form, textarea{
+    margin: 0; /* Elimina márgenes predeterminados en los elementos. */
+    padding: 0;  /* Elimina el padding predeterminado en los elementos. */
+}
+
+/* --------------- SECCION HEADER -------------------------*/
+
+.header {
+    background-color: #fff; /* Define un fondo blanco para el encabezado. */
+    display: flex; /* Establece un modelo de diseño flexible para alinear los elementos hijos. */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio entre ellos, dejando uno en cada extremo. */
+    align-items: center; /* Centra los elementos hijos verticalmente dentro del contenedor. */
+    container-type: inline-size; /* Permite la creación de consultas de contenedor basadas en el tamaño en línea del elemento. */
+    container-name: header; /* Asigna un nombre al contenedor para que pueda ser referenciado en consultas de contenedor. */
+    position: relative; /* Define una posición relativa para ajustar el z-index o posicionar elementos hijos de forma controlada. */
+    z-index: 10; /* Asegura que el encabezado se superponga a otros elementos en la misma posición. */
+    text-align: center; /* Centra el texto dentro del contenedor (si aplica). */
+    font-size: 20px;
+}
+
+.header__open-nav-button {
+    color: #48e; /* Establece un color azul (#48e) para el texto del botón. */
+    font-size: 3rem; /* Define un tamaño de fuente grande (3 rem) para hacer el botón más visible. */
+    font-weight: 800; /* Aplica un peso de fuente muy grueso para destacar el texto. */
+    position: absolute; /* Posiciona el botón de forma absoluta dentro de su contenedor relativo. */
+    right: 10px; /* Coloca el botón a 10px desde el borde derecho de su contenedor. */
+}
+
+.header__checkbox {
+    display: none; /* Oculta el checkbox del DOM visual, ya que solo se usa como activador del menú de navegación. */
+}
+
+.header__nav {
+    display: none; /* Inicialmente oculta el menú de navegación hasta que se active. */
+    background-color: #fff; /* Establece un fondo blanco para el menú de navegación. */
+    position: absolute; /* Posiciona el menú de forma absoluta respecto a su contenedor relativo. */
+    height: 100vw; /* Configura la altura del menú para ocupar el 100% del alto de la ventana. */
+    width: 100vw; /* Configura el ancho del menú para que sea cuadrado y coincida con la altura de la ventana. */
+    top: 0; /* Posiciona el menú en la parte superior de la ventana. */
+    z-index: -1; /* Envía el menú al fondo, detrás de otros elementos, asegurando que no interfiera visualmente hasta activarse. */
+}
+
+.header__nav-list {
+    display: flex; /* Organiza los elementos de la lista en un contenedor flexible. */
+    flex-direction: column; /* Alinea los elementos de la lista en una columna vertical. */
+    height: 40vh; /* Define una altura muy grande para efectos de diseño o pruebas (podría ajustarse según el contenido). */
+    margin: auto; /* Centra la lista en su contenedor, tanto horizontal como verticalmente, si hay espacio disponible. */
+    justify-content: space-evenly; /* Distribuye los elementos de la lista con espacios iguales entre ellos. */
+}
+
+.header__checkbox:checked~.header__nav {
+    display: flex; /* Muestra el menú de navegación cuando el checkbox está marcado. */
+}
+
+.header__logo {
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor. */
+    width: 80px; /* Define un ancho fijo para el logo. */
+    margin: 10px 20px; /* Agrega espacio alrededor del logo: 10px en la parte superior e inferior, y 20px a los lados. */
+}
+
+.header__nav-item {
+    list-style: none; /* Elimina los marcadores predeterminados (viñetas o números) de los elementos de la lista. */
+}
+
+.header__nav-item a {
+    color: #48e;
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
+}
+
+.header__nav-item :is(:hover, :active) {
+    text-decoration: underline;
+}
+
+/* --------------- HEADER QUERIES-------------------------*/
+
+@container header (min-width: 750px) {
+    .header__nav {
+        display: block; /* Cambia el contenedor de navegación a un bloque estándar, adecuado para pantallas más grandes. */
+        position: static; /* Restablece la posición al flujo normal del documento, eliminando cualquier posicionamiento absoluto previo. */
+        height: auto; /* Ajusta automáticamente la altura según el contenido del contenedor. */
+        width: auto; /* Ajusta automáticamente el ancho según el contenido del contenedor. */
+        justify-content: space-between; /* Distribuye los elementos dentro de la barra de navegación con espacio entre ellos. */
+        color: #48e; /* Cambia el color del texto a azul brillante. */
+        z-index: auto; /* Restablece la propiedad `z-index` para que no tenga prioridad en el apilamiento. */
+    }
+
+    .header__nav-list {
+        flex-direction: row; /* Cambia la disposición de los elementos de columna a fila, mostrando los elementos uno al lado del otro. */
+        height: auto; /* Ajusta automáticamente la altura según el contenido del contenedor. */
+        width: auto; /* Ajusta automáticamente el ancho según el contenido del contenido. */
+        gap: 20px; /* Agrega un espacio de 20px entre cada elemento de la lista. */
+        margin-right: 40px; /* Añade un margen a la derecha de 40px para separar la lista del resto de los elementos. */
+        z-index: 1; /* Establece la prioridad de apilamiento, asegurando que la lista esté por encima de otros elementos con un menor z-index. */
+    }
+    
+    .header__open-nav-button {
+        display: none; /* Oculta el botón que abre el menú de navegación en pantallas más grandes. */
+    }
+}
+
+/* --------------- SECCION HEADER ENDS -------------------------*/
+
+/* --------------- SECCION PROFILE -------------------------*/
+
+/* Define un contenedor de nombre 'profile' con tipo 'inline-size', lo que permite gestionar dimensiones y adaptaciones con Container Queries */
+.profile {
+    container-name: profile;
+    container-type: inline-size;
+}
+
+/* Estilo del contenedor principal que organiza el contenido interno en columnas centradas verticalmente. El ancho máximo garantiza que el contenido no exceda un límite. */
+.profile__wrapper {
+    display: flex; /* Usa Flexbox para disposición */
+    flex-direction: column; /* Organiza elementos verticalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
+    background-color: #fff; /* Fondo blanco */
+    max-width: 1490px; /* Ancho máximo del contenedor */
+}
+
+/* Contenedor para los datos personales con límite de ancho y espacio interno para separación del contenido. */
+.profile__data-container {
+    max-width: 500px; /* Limita el ancho del contenedor */
+    padding: 12px; /* Espaciado interno uniforme */
+}
+
+/* Contenedor de la imagen de perfil con límite de altura para controlar imágenes grandes. Se incluye la opción de ocultar contenido desbordante. */
+.profile__img-container {
+    max-height: 500px; /* Altura máxima permitida */
+    overflow: hidden;/* Comentado: puede activarse si las imágenes sobrepasan el contenedor */
+}
+
+/* Imagen de perfil, asegurándose de que sea adaptable al contenedor. El ancho máximo evita que exceda los bordes. */
+.profile__img {
+    max-width: 100%; /* Escala proporcionalmente dentro del contenedor */
+    width: 720px; /* Ancho fijo para pantallas mayores */
+}
+
+/* Estilo para el título principal con color azul personalizado */
+h1 {
+    color: #26a; /* Azul con matiz específico */
+}
+
+.profile__description{
+    color: #26a;
+    text-align: center;
+}
+
+/* Contenedor de habilidades con el mismo esquema de color */
+.profile__skills-container {
+    color: #26a; /* Azul para consistencia con el encabezado */
+}
+
+/* Lista de habilidades, eliminando los puntos de lista y organizando los ítems horizontalmente con Flexbox */
+.profile__skills {
+    list-style: none; /* Elimina los estilos predeterminados de lista */
+    display: flex; /* Disposición horizontal de ítems */
+    margin: 10px; /* Espaciado alrededor de la lista */
+    max-width: 600px; /* Ancho máximo */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Barra de progreso de habilidades con bordes redondeados, colores contrastantes y texto interno centrado. */
+.load-bar {
+    border: 2px solid #48e; /* Borde azul claro */
+    border-radius: 7px; /* Bordes redondeados */
+    color: #fff; /* Texto en blanco para contraste */
+    padding: 2px; /* Espaciado interno para contenido */
+    font-size: 12px; /* Tamaño de texto pequeño */
+    width: 80%; /* Ancho predeterminado */
+    margin: 4px; /* Espaciado vertical y horizontal */
+    margin-left: 0; /* Elimina margen a la izquierda */
+}
+
+/* Nombre de la habilidad con un color azul vibrante */
+.profile__skill-name {
+    color: #48e; /* Azul claro */
+}
+
+/* Barra interna de progreso con fondo azul, bordes redondeados 
+   y espaciado interno para ajustar el texto. */
+.load-bar__bar {
+    background-color: #48e; /* Fondo azul claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 4px 6px; /* Espaciado interno */
+}
+
+/* Clase específica para una barra con 80% de progreso.
+   Puede reutilizarse para otras habilidades con diferentes anchos. */
+.bar--80 {
+    width: 80%; /* Ancho definido como 80% */
+}
+
+.bar--70 {
+    width: 70%; /* Ancho definido como 80% */
+}
+
+.bar--90 {
+    width: 90%; /* Ancho definido como 80% */
+}
+
+/* --------------- PROFILE QUERIES-------------------------*/
+
+@container profile (min-width: 750px) {
+    .profile__wrapper {
+        flex-direction: row; /* Establece la orientación del contenedor como fila para una disposición horizontal de los elementos */
+        padding: 20px; /* Añade un relleno interior a los elementos dentro del contenedor */
+        background-color: transparent; /* Establece el color de fondo como transparente */
+        height: 90vh; /* Define la altura del contenedor como el 90% del alto de la ventana del navegador */
+        margin: auto; /* Centra el contenedor horizontalmente en la página */
+    }
+
+    .profile__data-container {
+        background-color: #fff; /* Define el color de fondo del contenedor de datos como blanco */
+        display: flex; /* Utiliza el modelo de caja flexible para organizar los elementos hijos en línea */
+        align-items: center; /* Alinea los elementos hijos verticalmente al centro */
+        border-radius: 0px 25px 25px 0; /* Rueda las esquinas del contenedor; top-right y bottom-right reciben una curva de 25px */
+        box-shadow: 0px 0px 9px #0002; /* Añade una sombra leve detrás del contenedor con un color de sombra semitransparente (#0002) */
+    }
+
+    h1 {
+        margin-top: 0; /* Elimina el margen superior del elemento h1 para evitar el espacio innecesario antes del contenido */
+        font-size: 2.5rem; /* Establece el tamaño de fuente del texto del encabezado a 2.5 rem */
+        text-wrap: balance; /* Mantiene el contenido del texto en una línea en lugar de usar un salto de línea innecesario */
+        text-align: center;
+    }
+
+    .profile__data {
+        max-width: 620px; /* Establece el ancho máximo del contenedor de datos a 620px para una mejor lectura y disposición */
+    }
+
+    .profile__img-container {
+        max-height: initial; /* Desactiva el ajuste automático de la altura para no limitar las dimensiones de la imagen */
+        border-radius: 25px 0 0 25px; /* Rueda las esquinas de la imagen; top-left y bottom-left reciben una curva de 25px */
+    }
+
+    .profile__img {
+        height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+        object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor sin distorsión */
+        width: 620px; /* Establece el ancho de la imagen a 620px para que coincida con el contenedor de datos */
+    }
+}
+
+/* --------------- SECCION PROFILE ENDS -------------------------*/
+
+/* --------------- SECCION PROJECTS -------------------------*/
+
+.portfolio {
+    background-color: #18233f;
+    color: #fff; 
+    min-height: 100vh; /* Altura mínima de la sección para cubrir la pantalla completa */
+    display: flex; /* Utiliza Flexbox para alinear y distribuir elementos */
+    flex-direction: column; /* Orientación de los elementos en una columna */
+    text-align: center; /* Centra el texto */
+    container-name: portfolio;
+    container-type: inline-size; /* Asigna un tamaño basado en tamaño fijo para las columnas */
+    justify-content: space-evenly;
+}
+
+/* Título de la sección Portfolio */
+.portfolio__title {
+    font-size: 2rem; /* Tamaño de fuente grande para destacar el título */
+    margin-bottom: 0; 
+}
+
+/* Contenedor de proyectos en la sección Portfolio */
+.portfolio__project-container {
+    display: grid; /* Utiliza un diseño en cuadrícula para organizar los proyectos */
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+    max-width: 1300px; /* Ancho máximo del contenedor de proyectos */
+    margin: auto; /* Centra el contenedor en la página */
+    width: 100%;
+    gap: 12px; /* Espacio entre elementos de la cuadrícula */
+    padding: 12px; /* Espaciado interno dentro del contenedor */
+    min-height: 80vh; /* Altura mínima para que el contenido se vea adecuadamente en pantallas más pequeñas */
+}
+
+/* Estilo de los proyectos individuales en la sección Portfolio */
+.portfolio__project {
+    /* Fondo con gradiente y imagen de fondo */
+    background-image: linear-gradient(#0009, #0006), url(/Nivel-Basico-HTML/imagenes/4799410.jpg); 
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
+    display: grid; /* Utiliza un diseño en cuadrícula para centrar el contenido */
+    place-content: center; /* Centra el contenido dentro del contenedor */
+    border-radius: 8px; /* Bordes redondeados para los proyectos */
+}
+
+/* Efecto de hover para los proyectos individuales */
+.portfolio__project:hover {
+    opacity: 0.74; /* Reduce la opacidad al pasar el mouse para crear un efecto de "hover" */
+    outline: 2px solid #fff6; /* Añade un borde sutil para resaltar el proyecto */
+}
+
+/* Consultas de medios para responsive design en Portfolio */
+
+@container portfolio (min-width: 56.25rem) {
+    /* Ajustes para pantallas más grandes */
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* Ajusta el número de columnas dependiendo del ancho de la pantalla */
+    }
+
+    .portfolio__project:first-child {
+        grid-column: span 2; /* Hace que el primer proyecto ocupe dos columnas */
+    }
+
+    .portfolio__project:nth-child(6) {
+        grid-column: span 2; /* Hace que el sexto proyecto ocupe dos columnas */
+    }
+
+    @container portfolio (min-width: 81.25rem) {
+        /* Ajustes para pantallas más grandes aún */
+        .portfolio__project-container {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el tamaño de las columnas para pantallas más grandes */
+        }
+
+        .portfolio__project:first-child {
+            grid-column: span 2; /* Ocupa dos columnas y dos filas en dispositivos más grandes */
+            grid-row: span 2; /* Ocupa dos filas en dispositivos más grandes */
+        }
+
+        .portfolio__project:nth-child(6) {
+            grid-column: span 4; /* Hace que el sexto proyecto ocupe cuatro columnas */
+        }
+    }
+}
+
+/* --------------- SECCION PROJECTS ENDS-------------------------*/
+
+/* --------------- SECCION CONTACT -------------------------*/
+
+.form{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__form{
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+}
+
+.form__input-container :is(input,textarea){
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+.form__input-container textarea{
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"]{
+    padding: 12px;
+    background-color: #48e;
+    color: #fff;
+}
+
+.form__title{
+    font-size: 2rem;
+}
+
+@container form (min-width: 56.25rem){
+
+    .form__form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name lastname"
+        "email email"
+        "message message"
+        "button button";
+        gap: 12px;
+        background-image: radial-gradient(#18233f06, #18233f22);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 40px #0006;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .form__input-container:first-child{
+        grid-area: name;
+    }
+
+    .form__input-container:nth-child(2){
+        grid-area: lastname;
+    }
+
+    .form__input-container:nth-child(3){
+        grid-area: email;
+    }
+
+    .form__input-container:nth-child(4){
+        grid-area: message;
+    }
+
+    .form__input-container:nth-child(5){
+        grid-area: button;
+    }
+
+    .form__input-container :is(input, textarea){
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+}
+
+/* --------------- CONTACT ENDS-------------------------*/
+
+/* --------------- FOOTER SECCION-------------------------*/
+
+footer{
+    padding: 60px;
+    text-align: center;
+    background-color: #18233f;
+    color: #fffd;
+    font-size: 22px;
+}
