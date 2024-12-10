@@ -13,16 +13,7 @@ body {
 }
 
 /* Reseteo general para márgenes y paddings en elementos comunes para evitar inconsistencias entre navegadores.*/
-body,
-div,
-ul,
-nav,
-header,
-a,
-li,
-label,
-input, 
-img, main, h1, p, h2, span, section, form, textarea{
+body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, section, form, textarea{
     margin: 0; /* Elimina márgenes predeterminados en los elementos. */
     padding: 0;  /* Elimina el padding predeterminado en los elementos. */
 }
@@ -36,7 +27,8 @@ img, main, h1, p, h2, span, section, form, textarea{
     align-items: center; /* Centra los elementos hijos verticalmente dentro del contenedor. */
     container-type: inline-size; /* Permite la creación de consultas de contenedor basadas en el tamaño en línea del elemento. */
     container-name: header; /* Asigna un nombre al contenedor para que pueda ser referenciado en consultas de contenedor. */
-    position: relative; /* Define una posición relativa para ajustar el z-index o posicionar elementos hijos de forma controlada. */
+    position: sticky; /* Define una posición relativa para ajustar el z-index o posicionar elementos hijos de forma controlada. */
+    top: 0;
     z-index: 10; /* Asegura que el encabezado se superponga a otros elementos en la misma posición. */
     text-align: center; /* Centra el texto dentro del contenedor (si aplica). */
     font-size: 20px;
@@ -44,7 +36,7 @@ img, main, h1, p, h2, span, section, form, textarea{
 
 .header__open-nav-button {
     color: #48e; /* Establece un color azul (#48e) para el texto del botón. */
-    font-size: 3rem; /* Define un tamaño de fuente grande (3 rem) para hacer el botón más visible. */
+    font-size: 2.5rem; /* Define un tamaño de fuente grande (3 rem) para hacer el botón más visible. */
     font-weight: 800; /* Aplica un peso de fuente muy grueso para destacar el texto. */
     position: absolute; /* Posiciona el botón de forma absoluta dentro de su contenedor relativo. */
     right: 10px; /* Coloca el botón a 10px desde el borde derecho de su contenedor. */
@@ -78,12 +70,13 @@ img, main, h1, p, h2, span, section, form, textarea{
 
 .header__logo {
     max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor. */
-    width: 80px; /* Define un ancho fijo para el logo. */
+    width: 50px; /* Define un ancho fijo para el logo. */
     margin: 10px 20px; /* Agrega espacio alrededor del logo: 10px en la parte superior e inferior, y 20px a los lados. */
 }
 
 .header__nav-item {
     list-style: none; /* Elimina los marcadores predeterminados (viñetas o números) de los elementos de la lista. */
+    font-size: 1rem;
 }
 
 .header__nav-item a {
@@ -144,7 +137,7 @@ img, main, h1, p, h2, span, section, form, textarea{
 /* Contenedor para los datos personales con límite de ancho y espacio interno para separación del contenido. */
 .profile__data-container {
     max-width: 500px; /* Limita el ancho del contenedor */
-    padding: 12px; /* Espaciado interno uniforme */
+    padding: 20px; /* Espaciado interno uniforme */
 }
 
 /* Contenedor de la imagen de perfil con límite de altura para controlar imágenes grandes. Se incluye la opción de ocultar contenido desbordante. */
@@ -164,6 +157,16 @@ h1 {
     color: #26a; /* Azul con matiz específico */
 }
 
+.profile__description--subtitle{
+    color: #26a;
+    padding: 10px ;
+}
+
+.profile__description--parrafo{
+    color: #26a;
+    padding: 10px;
+}
+
 .profile__description{
     color: #26a;
     text-align: center;
@@ -172,6 +175,7 @@ h1 {
 /* Contenedor de habilidades con el mismo esquema de color */
 .profile__skills-container {
     color: #26a; /* Azul para consistencia con el encabezado */
+    padding: 10px;
 }
 
 /* Lista de habilidades, eliminando los puntos de lista y organizando los ítems horizontalmente con Flexbox */
@@ -285,6 +289,7 @@ h1 {
 .portfolio__title {
     font-size: 2rem; /* Tamaño de fuente grande para destacar el título */
     margin-bottom: 0; 
+    margin-top: 40px;
 }
 
 /* Contenedor de proyectos en la sección Portfolio */
@@ -394,6 +399,13 @@ h1 {
 
 .form__title{
     font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form__input__label{
+    color: #26a;
+    padding: 10px;
+    
 }
 
 @container form (min-width: 56.25rem){
