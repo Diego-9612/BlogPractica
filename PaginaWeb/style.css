@@ -37,6 +37,7 @@ label {
     z-index: 10;
     text-align: center;
     font-size: 20px;
+    color: #48e;
 }
 
 .header__open-nav-button {
@@ -87,7 +88,7 @@ label {
 }
 
 .header__nav-item a {
-    color: #48e;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -97,14 +98,23 @@ label {
 
 /* --------------- HEADER QUERIES-------------------------*/
 
-@container header (min-width: 750px) {
+@media screen and (min-width: 750px) {
+
+    .header{
+        padding: 20px 0;
+        animation:  header-movement both;
+        animation-timeline: scroll();
+        position: sticky;
+        top: 0;
+        animation-range: 10px 100px;
+    }
     .header__nav {
         display: block;
         position: static;
         height: auto;
         width: auto;
         justify-content: space-between;
-        color: #48e;
+        background-color: initial;
         z-index: auto;
     }
 
@@ -128,6 +138,7 @@ label {
 .profile {
     container-name: profile;
     container-type: inline-size;
+    animation: aparecer 2.4s -.6s both;
 }
 
 
@@ -278,6 +289,9 @@ h1 {
     display: grid;
     place-content: center;
     border-radius: 8px;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 5% cover 48%;
 }
 
 .portfolio__project:hover {
@@ -329,6 +343,9 @@ h1 {
     padding: 30px 0;
     container-name: form;
     container-type: inline-size;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 20% contain 40%;
 }
 
 .form__form{
@@ -423,4 +440,28 @@ footer{
     font-size: 22px;
 }
 
+/* --------------- ANIMACIONES-------------------------*/
 
+
+@keyframes header-movement{
+    from{
+        padding: 20px 0;
+        background-color: #fff;
+    }
+
+    to{
+        padding: 0;
+        background-color: #10163266;
+        color: #fff;
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
