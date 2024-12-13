@@ -32,6 +32,7 @@ body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, sec
     z-index: 10; /* Asegura que el encabezado se superponga a otros elementos en la misma posición. */
     text-align: center; /* Centra el texto dentro del contenedor (si aplica). */
     font-size: 20px;
+    color: #48e;
 }
 
 .header__open-nav-button {
@@ -71,33 +72,63 @@ body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, sec
 .header__logo {
     max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor. */
     width: 50px; /* Define un ancho fijo para el logo. */
-    margin: 10px 20px; /* Agrega espacio alrededor del logo: 10px en la parte superior e inferior, y 20px a los lados. */
+    margin: 0px 20px; /* Agrega espacio alrededor del logo: 10px en la parte superior e inferior, y 20px a los lados. */
 }
 
 .header__nav-item {
     list-style: none; /* Elimina los marcadores predeterminados (viñetas o números) de los elementos de la lista. */
     font-size: 1rem;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
 .header__nav-item a {
-    color: #48e;
+    color: inherit;
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
 }
 
-.header__nav-item :is(:hover, :active) {
-    text-decoration: underline;
+.item__animation:hover{
+    color: #fff;
 }
+
+.item__animation::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 20px;
+    background: #fff;
+    z-index: -1;
+}
+
+.item__animation:hover::before{
+    animation: fill 1s forwards;
+}
+
+
 
 /* --------------- HEADER QUERIES-------------------------*/
 
-@container header (min-width: 750px) {
+@media screen and (min-width: 750px) {
+
+    .header{
+        padding: 10px 0;
+        animation:  header-movement both;
+        animation-timeline: scroll();
+        position: sticky;
+        top: 0;
+        animation-range: 10px 100px;
+    }
+    
     .header__nav {
         display: block; /* Cambia el contenedor de navegación a un bloque estándar, adecuado para pantallas más grandes. */
         position: static; /* Restablece la posición al flujo normal del documento, eliminando cualquier posicionamiento absoluto previo. */
         height: auto; /* Ajusta automáticamente la altura según el contenido del contenedor. */
         width: auto; /* Ajusta automáticamente el ancho según el contenido del contenedor. */
         justify-content: space-between; /* Distribuye los elementos dentro de la barra de navegación con espacio entre ellos. */
-        color: #48e; /* Cambia el color del texto a azul brillante. */
+        background-color: initial;
         z-index: auto; /* Restablece la propiedad `z-index` para que no tenga prioridad en el apilamiento. */
     }
 
@@ -113,6 +144,11 @@ body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, sec
     .header__open-nav-button {
         display: none; /* Oculta el botón que abre el menú de navegación en pantallas más grandes. */
     }
+
+    .item__animation:hover::before{
+        animation: fill 1s forwards;
+    }
+
 }
 
 /* --------------- SECCION HEADER ENDS -------------------------*/
@@ -123,6 +159,7 @@ body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, sec
 .profile {
     container-name: profile;
     container-type: inline-size;
+    animation: aparecer 2.4s -.6s both;
 }
 
 /* Estilo del contenedor principal que organiza el contenido interno en columnas centradas verticalmente. El ancho máximo garantiza que el contenido no exceda un límite. */
@@ -137,7 +174,7 @@ body, div, ul, nav, header, a, li, label, input, img, main, h1, p, h2, span, sec
 /* Contenedor para los datos personales con límite de ancho y espacio interno para separación del contenido. */
 .profile__data-container {
     max-width: 500px; /* Limita el ancho del contenedor */
-    padding: 20px; /* Espaciado interno uniforme */
+    padding: 12px; /* Espaciado interno uniforme */
 }
 
 /* Contenedor de la imagen de perfil con límite de altura para controlar imágenes grandes. Se incluye la opción de ocultar contenido desbordante. */
@@ -313,6 +350,9 @@ h1 {
     display: grid; /* Utiliza un diseño en cuadrícula para centrar el contenido */
     place-content: center; /* Centra el contenido dentro del contenedor */
     border-radius: 8px; /* Bordes redondeados para los proyectos */
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 5% cover 48%;
 }
 
 /* Efecto de hover para los proyectos individuales */
@@ -367,6 +407,9 @@ h1 {
     padding: 30px 0;
     container-name: form;
     container-type: inline-size;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: cover 20% contain 40%;
 }
 
 .form__form{
@@ -464,3 +507,49 @@ footer{
     color: #fffd;
     font-size: 22px;
 }
+/* --------------- FOOTER SECCION ENDS -------------------------*/
+
+/* --------------- ANIMACIONES-------------------------*/
+
+
+@keyframes header-movement{
+    from{
+        padding: 20px 0;
+        background-color: #fff;
+    }
+
+    to{
+        padding: 0;
+        background-color: #10163266;
+        color: #fff;
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fill{
+    0%{
+        width: 0%;
+    }
+
+    50%{
+        width: 100%;
+        height: 2px;
+    }
+
+    100%{
+        width: 100%;
+        height: 100%;
+        background: #48e;
+    }
+}
+
+
